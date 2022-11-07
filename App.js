@@ -9,8 +9,8 @@ import {
 import {AppNavigation} from './src/navigation';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import './src/consts/translations/IMLocalize';
-import { Provider } from 'react-redux'
-import { store } from './src/store/Home/store';
+import {Provider} from 'react-redux';
+import {store} from './src/store/Home/store';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -22,11 +22,10 @@ const App = () => {
 
   return (
     <Provider store={store}>
-
-    <SafeAreaView style={containerStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppNavigation />
-    </SafeAreaView>
+      <SafeAreaView style={containerStyle}>
+        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+        <AppNavigation />
+      </SafeAreaView>
     </Provider>
   );
 };
