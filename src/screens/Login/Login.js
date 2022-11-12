@@ -60,9 +60,9 @@ const Login = props => {
         .then(res => {
           props.navigation.navigate('homescreen',{'name':res.data.name});
           setIsLoading(false);  
-          console.log("danyal data=",res.data.name)
+          console.log("danyal data=",res.data)
           global.username=res.data.name
-          dispatch(AddUser(res.data.name))
+          dispatch(AddUser(res.data))
         })
         .catch(e => { 
           setIsLoading(false);
